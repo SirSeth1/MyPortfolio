@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Seth Wambua — Visual Artist/Software Engineer</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="myportfolio.css" />
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-left">
+          <div class="brand">
+        <div class="logo">S</div>
+        <div class="brand-text">
+          <div class="name">Seth Wambua</div>
+          <div class="sub">Visual Artist • Designer • Software Engineer</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="nav-right">
+      <a href="#about">About</a>
+      <a href="#work">Work</a>
+      <a href="#contact">Contact</a>
+      <button id="menuBtn" class="hamburger" aria-label="Open menu">☰</button>
+    </div>
+  </nav>
+
+  <header class="hero" id="home">
+    <div class="decor-bg"></div>
+    <div class="hero-inner">
+      <div class="hero-left">
+        <h1 class="headline">Let us imagine, let us create</h1>
+        <p class="lead">Pencil & graphite compositions • Android app development</p>
+
+        <div class="cta">
+          <a class="btn primary" href="#contact">Hire me</a>
+          <a class="btn ghost" href="/Seth_Wambua_Resume.pdf" target="_blank" id="resumeLink">Download resume</a>
+        </div>
+
+        <div class="skills">
+          <span>Pencil & Graphite</span>
+          <span>Android App Development</span>
+          <span>Web & UI</span>
+          <span>Branding</span>
+        </div>
+
+        <div class="contact-mini">
+          <a href="mailto:sethmusyoka2021@gmail.com">sethmusyoka2021@gmail.com</a> • <a href="tel:+254759646009">0759646009</a>
+        </div>
+      </div>
+
+      <aside class="hero-right">
+        <div class="portrait-card">
+          <!-- editable: replace src with your portrait -->
+          <img src="SirSeth.jfif" alt="Portrait of Seth Wambua" class="portrait-image" />
+          <div class="portrait-meta">
+            <div class="role">Visual Artist & Designer</div>
+            <div class="location">Nairobi · Kenya</div>
+          </div>
+        </div>
+        <div class="petals-holder" aria-hidden="true"></div>
+      </aside>
+    </div>
+  </header>
+
+  <main>
+    <section class="about container" id="about">
+      <div class="card">
+        <h2>About</h2>
+        <p id="bioText">I combine hand-drawn techniques with digital tools to craft intimate visual narratives. My practice emphasizes negative space, subtle color accents, and composition drawn from Japanese aesthetics. Available for commissions and collaborations.</p>
+      </div>
+    </section>
+
+    <section class="work container" id="work">
+      <div class="section-head">
+        <h2>Selected Work</h2>
+        <p class="muted">Tap an image to view. Use the arrows or swipe on mobile.</p>
+      </div>
+
+      <div class="slider" id="gallerySlider">
+        <button class="slide-btn left" id="prevBtn" aria-label="Previous">‹</button>
+        <div class="slides" id="slides">
+          <!-- Slides - replace these with your images and captions -->
+          <figure class="slide">
+            <img src="art1.jfif" alt="Project 1">
+            <figcaption>
+              <strong>Display 1</strong>
+              <span class="year">2024</span>
+              <p>Swift spots blur the plain, Chasing, a golden missile, Rest in the tall grass</p>
+            </figcaption>
+          </figure>
+
+          <figure class="slide">
+            <img src="art2.jfif" alt="Project 2">
+            <figcaption>
+              <strong>Display 2</strong>
+              <span class="year">2025</span>
+              <p>Ancient, wrinkled skin, Trunk reaches for highest leaves, Soft rumble echoes.</p>
+            </figcaption>
+          </figure>
+
+          <figure class="slide">
+            <img src="art3.jfif" alt="Project 3">
+            <figcaption>
+              <strong>Display 3</strong>
+              <span class="year">2025</span>
+              <p>Ten fingers reach out, Grasping, shaping, giving grace, Work finished, they rest.</p>
+            </figcaption>
+          </figure>
+        </div>
+        <button class="slide-btn right" id="nextBtn" aria-label="Next">›</button>
+        <div class="dots" id="dots"></div>
+      </div>
+    </section>
+
+    <section class="contact container" id="contact">
+      <div class="card small">
+        <h2>Contact</h2>
+        <p class="muted">Reach out for commissions, freelance work, or collabs.</p>
+
+        <form id="contactForm">
+          <div class="row">
+            <input id="cfName" type="text" placeholder="Your name" required>
+            <input id="cfEmail" type="email" placeholder="Your email" required>
+          </div>
+          <textarea id="cfMessage" rows="5" placeholder="Your message" required></textarea>
+          <div class="row actions">
+            <button type="submit" class="btn primary">Send message</button>
+            <button type="button" class="btn ghost" id="resetBtn">Reset</button>
+          </div>
+        </form>
+
+        <div class="socials_small-muted">
+          <a href="https://www.instagram.com/sirsxth_drws" target="_blank">Instagram</a> • <a href="https://www.linkedin.com/in/seth-wambua-1a2b80290/" target="_blank">LinkedIn</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div>Built with care • Editable HTML/CSS/JS</div>
+    <div class="small-muted">© <span id="year"></span> Seth Wambua</div>
+  </footer>
+
+  <!-- big image popup -->
+  <div id="imgPopup" class="img-popup" aria-hidden="true">
+    <div class="popup-bg" id="popupBg"></div>
+    <img id="popupImg" alt="Enlarged project image">
+    <button id="closePopup" class="popup-close" aria-label="Close">✕</button>
+  </div>
+
+  <script src="myportfolio.js"></script>
+</body>
+</html>
